@@ -1,0 +1,111 @@
+/* ================================
+   Main Wrapper
+   ================================ */
+.products-p2-main-container {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  min-height: 100vh;
+  background: #fafafa;
+}
+
+.dark .products-p2-main-container {
+  background: #1f1f1f;
+  color: #eee;
+}
+
+/* ================================
+   Filter Toggle Button (Mobile)
+   ================================ */
+.products-mobile-filter-toggle-button {
+  display: none;
+  margin-bottom: 15px;
+  padding: 10px 18px;
+  background: #6a00ff;
+  color: #fff;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.products-mobile-filter-toggle-button:hover {
+  background: #5200cc;
+}
+
+/* ================================
+   Filter Container
+   ================================ */
+.products-filter-container {
+  width: 100%;
+  margin-right: 20px;
+}
+
+.products-filter-container.active {
+  display: block;
+}
+
+/* ================================
+   Products Container
+   ================================ */
+.products-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================================
+   Products Grid
+   ================================ */
+.products-row-div {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+/* ================================
+   Product Link (wrapping card)
+   ================================ */
+.product-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease;
+}
+
+.product-link:hover {
+  transform: translateY(-4px);
+}
+
+/* ================================
+   Responsive Layout
+   ================================ */
+@media (max-width: 992px) {
+  .products-p2-main-container {
+    flex-direction: column;
+  }
+
+  .products-filter-container {
+    display: none; /* hidden by default on mobile */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 75%;
+    max-width: 320px;
+    height: 100%;
+    background: #fff;
+    box-shadow: 2px 0 18px rgba(0, 0, 0, 0.25);
+    padding: 20px;
+    z-index: 2000;
+    overflow-y: auto;
+  }
+
+  .dark .products-filter-container {
+    background: #2a2a2a;
+  }
+
+  .products-mobile-filter-toggle-button {
+    display: inline-block;
+  }
+}

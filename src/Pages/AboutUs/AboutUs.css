@@ -1,0 +1,266 @@
+/* ================================
+   Global Theme Base
+   ================================ */
+body {
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+.fullscreen-container {
+  height: 100vh;   /* full viewport height */
+  width: 100vw;    /* full viewport width */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Light Theme */
+.light {
+  background: #f8faff;
+  color: #333;
+}
+
+/* Dark Theme */
+.dark {
+  background: #1c1c1c;
+  color: #eee;
+}
+
+/* ================================
+   Section Titles
+   ================================ */
+.section-title {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 50px;
+  position: relative;
+  padding-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.light .section-title {
+  color: #2c3e50;
+}
+
+.dark .section-title {
+  color: #f0f0f0;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background-color: #00bcd4;
+  border-radius: 2px;
+}
+
+/* ================================
+   Hero Section
+   ================================ */
+.about-hero-section {
+  background: linear-gradient(rgba(0, 188, 212, 0.7), rgba(0, 188, 212, 0.7)),
+    url('https://miro.medium.com/v2/resize:fit:1200/1*CJp8DymxI7g8rbLHTSUDxA.png')
+      no-repeat center center/cover;
+  text-align: center;
+  padding: 100px 20px;
+  margin-bottom: 60px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  transition: background 0.3s ease;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.3rem;
+  margin-bottom: 40px;
+  line-height: 1.8;
+}
+
+.hero-button {
+  background-color: #fff;
+  color: #00bcd4;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hero-button:hover {
+  background: #e0f7fa;
+  color: #008ba3;
+}
+
+/* ================================
+   Mission Cards
+   ================================ */
+.mission-section {
+  padding: 60px 20px;
+  border-radius: 10px;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.light .mission-section {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dark .mission-section {
+  background: #2a2a2a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.mission-card {
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.light .mission-card {
+  background: #fdfdfd;
+  border: 1px solid #eee;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03);
+}
+
+.dark .mission-card {
+  background: #333;
+  border: 1px solid #444;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6);
+}
+
+.mission-card:hover {
+  transform: translateY(-5px);
+}
+
+.light .mission-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.dark .mission-card:hover {
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* ================================
+   Values Section
+   ================================ */
+.values-section {
+  padding: 80px 20px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.light .values-section {
+  background: #e0f7fa;
+}
+
+.dark .values-section {
+  background: #1e3a3a;
+}
+
+.values-image {
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* ================================
+   Testimonial Section
+   ================================ */
+.testimonial-section {
+  padding: 60px 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.light .testimonial-section {
+  background: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+}
+
+.dark .testimonial-section {
+  background: #2a2a2a;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+}
+
+.testimonial-card {
+  margin: 40px auto 0;
+  padding: 40px;
+  border-radius: 10px;
+  position: relative;
+  border-top: 5px solid #6a00ff;
+  transition: background 0.3s ease;
+}
+
+.light .testimonial-card {
+  background: #fdfdfd;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+}
+
+.dark .testimonial-card {
+  background: #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+.testimonial-quote {
+  font-size: 1.25rem;
+  font-style: italic;
+  margin-bottom: 25px;
+  color: inherit;
+}
+
+/* ================================
+   Call to Action
+   ================================ */
+.call-to-action-section {
+  text-align: center;
+  padding: 80px 20px;
+  margin-top: 60px;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.light .call-to-action-section {
+  background: #e0f7fa;
+  color: #333;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.dark .call-to-action-section {
+  background: #004d4d;
+  color: #fff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.cta-button {
+  background: #6a00ff;
+  color: #fff;
+  padding: 15px 40px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.cta-button:hover {
+  background: #5a00e0;
+}

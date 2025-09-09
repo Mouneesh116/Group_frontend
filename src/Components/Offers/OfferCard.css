@@ -1,0 +1,174 @@
+/* =========================
+   OfferCard Styles
+   ========================= */
+.offer-card-fashi-offer-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  border-radius: 1rem;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.offer-card-fashi-offer-banner:hover {
+  transform: translateY(-6px);
+}
+
+/* Light Theme */
+.light .offer-card-fashi-offer-banner {
+  background: #fff;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.light .offer-card-fashi-offer-banner:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+/* Dark Theme */
+.dark .offer-card-fashi-offer-banner {
+  background: #2a2a2a;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.dark .offer-card-fashi-offer-banner:hover {
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6);
+}
+
+/* =========================
+   Left Text Section
+   ========================= */
+.offer-card-fashi-offer-text-content {
+  flex: 1;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.light .offer-card-fashi-offer-text-content {
+  background: linear-gradient(135deg, #fdfdfd, #fafafa);
+  color: #222;
+}
+
+.dark .offer-card-fashi-offer-text-content {
+  background: linear-gradient(135deg, #2a2a2a, #1e1e1e);
+  color: #fff;
+}
+
+.offer-card-fashi-small-text {
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  color: #ff6b6b;
+}
+
+.offer-card-fashi-title {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0.5rem 0 1rem;
+  line-height: 1.2;
+}
+
+.offer-card-fashi-description {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 85%;
+}
+
+/* =========================
+   Button Styles
+   ========================= */
+.offer-card-fashi-button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.light .offer-card-fashi-button {
+  background: #222;
+  color: #fff;
+}
+
+.light .offer-card-fashi-button:hover {
+  background: #ff6b6b;
+  transform: scale(1.05);
+}
+
+.dark .offer-card-fashi-button {
+  background: #fff;
+  color: #222;
+}
+
+.dark .offer-card-fashi-button:hover {
+  background: #ff6b6b;
+  color: #fff;
+  transform: scale(1.05);
+}
+
+/* =========================
+   Right Image Section
+   ========================= */
+.offer-card-fashi-offer-image-section {
+  flex: 1;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  min-height: 350px;
+}
+
+/* =========================
+   Sale Badge
+   ========================= */
+.offer-card-fashi-sale-badge {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-transform: uppercase;
+  box-shadow: 0 4px 12px rgba(255, 107, 107, 0.4);
+  background: #ff6b6b;
+  color: #fff;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .offer-card-fashi-offer-banner {
+    flex-direction: column-reverse;
+  }
+
+  .offer-card-fashi-offer-text-content {
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .offer-card-fashi-description {
+    max-width: 100%;
+    margin: 0 auto 1.5rem;
+  }
+
+  .offer-card-fashi-offer-image-section {
+    min-height: 250px;
+  }
+
+  .offer-card-fashi-sale-badge {
+    top: 1rem;
+    right: 1rem;
+    padding: 0.5rem 1rem;
+  }
+}
+  

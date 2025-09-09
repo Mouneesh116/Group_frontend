@@ -1,0 +1,133 @@
+
+.categories-row-container {
+  width: 100vw; 
+  min-height: 100vh;
+  padding: 40px 20px;
+  text-align: center;
+  background: var(--categories-bg);
+  color: var(--categories-text);
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+
+.categories-row-title {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 25px;
+  color: var(--categories-title);
+  position: relative;
+  display: inline-block;
+}
+
+.categories-row-title::after {
+  content: '';
+  display: block;
+  margin: 8px auto 0;
+  width: 60px;
+  height: 3px;
+  background: var(--accent-color); /* Accent line */
+  border-radius: 2px;
+}
+
+/* ================================
+   Grid Layout
+   ================================ */
+.categories-row-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(150px, 1fr));
+  gap: 60px;
+  justify-items: center;
+}
+
+/* ================================
+   Category Items
+   ================================ */
+.categories-row-item {
+  width: 100%;
+  padding-top: 100%; /* Square ratio */
+  position: relative;
+  border-radius: 12px;
+
+  overflow: hidden;
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  box-shadow: var(--categories-card-shadow);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.categories-row-item:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--categories-card-hover-shadow);
+}
+
+/* Overlay with category label */
+.categories-row-label-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.categories-row-item:hover .categories-row-label-overlay {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.categories-row-label-overlay p {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: capitalize;
+  margin: 0;
+}
+
+/* Link reset */
+.categories-row-link {
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 768px) {
+  .categories-row-title {
+    font-size: 1.5rem;
+  }
+
+  .categories-row-label-overlay p {
+    font-size: 1rem;
+  }
+}
+
+/* ================================
+   Theme Variables
+   ================================ */
+
+/* 🌞 Light Mode */
+.light {
+  --categories-bg: #fafafa;
+  --categories-text: #333;
+  --categories-title: #333;
+  --accent-color: #2196f3;
+
+  --categories-card-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  --categories-card-hover-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+/* 🌙 Dark Mode */
+.dark {
+  --categories-bg: #1c1c1c;
+  --categories-text: #f1f1f1;
+  --categories-title: #f1f1f1;
+  --accent-color: #90caf9; /* lighter blue for contrast */
+
+  --categories-card-shadow: 0 2px 6px rgba(255, 255, 255, 0.05);
+  --categories-card-hover-shadow: 0 6px 15px rgba(255, 255, 255, 0.12);
+}

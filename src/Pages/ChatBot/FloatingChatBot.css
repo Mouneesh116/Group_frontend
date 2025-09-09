@@ -1,0 +1,93 @@
+/* ================================
+   Floating Chatbot Wrapper
+   ================================ */
+.floating-chatbot-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 2000; /* stays above everything */
+}
+
+/* ================================
+   Floating Button
+   ================================ */
+.floating-chatbot-button {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: none;
+  background: #6a00ff;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.floating-chatbot-button:hover {
+  background: #5200cc;
+  transform: scale(1.05);
+}
+
+.floating-chatbot-button span {
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.chat-icon {
+  stroke: #fff;
+  width: 28px;
+  height: 28px;
+}
+
+/* ================================
+   Chatbot Popup
+   ================================ */
+.chatbot-popup {
+  position: absolute;
+  bottom: 75px; /* sits above the button */
+  right: 0;
+  width: 360px;
+  height: 500px;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.3);
+  animation: slideUp 0.3s ease forwards;
+}
+
+/* Dark theme support */
+.dark .chatbot-popup {
+  background: #1e1e1e;
+  color: #eee;
+}
+
+/* ================================
+   Animations
+   ================================ */
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 500px) {
+  .chatbot-popup {
+    width: 95vw;
+    height: 80vh;
+    bottom: 80px;
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

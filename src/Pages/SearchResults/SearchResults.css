@@ -1,0 +1,110 @@
+/* ================================
+   Main Container
+   ================================ */
+.searchresults-main-container {
+  padding: 40px 20px;
+  min-height: 80vh;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ================================
+   Header
+   ================================ */
+.searchresults-header {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  font-weight: bold;
+  color: #333;
+}
+
+.dark .searchresults-header {
+  color: #eee;
+}
+
+/* ================================
+   Messages
+   ================================ */
+.searchresults-message {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  color: #666;
+}
+
+.dark .searchresults-message {
+  color: #aaa;
+}
+
+.searchresults-error-message {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-top: 20px;
+  color: #d32f2f;
+  font-weight: bold;
+}
+
+/* ================================
+   Content Area
+   ================================ */
+.searchresults-content-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* ================================
+   Flex Layout for Products
+   ================================ */
+.searchresults-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* center items */
+  gap: 20px;
+  width: 100%;
+  margin-top: 20px;
+}
+
+/* ================================
+   Product Links
+   ================================ */
+.searchresults-productcard-link {
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 10px;
+  flex: 1 1 220px; /* grow/shrink, base width */
+  max-width: 260px; /* limit width so cards don’t stretch too far */
+}
+
+.searchresults-productcard-link:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 768px) {
+  .searchresults-header {
+    font-size: 1.6rem;
+  }
+
+  .searchresults-grid {
+    gap: 15px;
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 480px) {
+  .searchresults-header {
+    font-size: 1.4rem;
+  }
+
+  .searchresults-productcard-link {
+    flex: 1 1 100%; /* full width on very small screens */
+    max-width: 100%;
+  }
+}

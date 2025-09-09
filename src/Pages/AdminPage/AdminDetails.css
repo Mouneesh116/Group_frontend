@@ -1,0 +1,115 @@
+/* ================================
+   Admin Profile Container
+   ================================ */
+.admin-profile-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 25px;
+  background: var(--card-bg);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--card-shadow);
+  transition: background 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* ================================
+   Statistics Section
+   ================================ */
+.admindetails-profile-stats h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.admindetails-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 20px;
+}
+
+.admindetails-stat-card {
+  background: var(--content-bg);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 2px 8px var(--card-shadow);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.admindetails-stat-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 14px var(--card-shadow);
+}
+
+.admindetails-stat-card h4 {
+  font-size: 1.1rem;
+  color: var(--text-color);
+  margin-bottom: 10px;
+}
+
+.admindetails-stat-card p {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--accent-color);
+}
+
+/* ================================
+   Actions Section
+   ================================ */
+.admindetails-profile-actions h3 {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: var(--text-color);
+}
+
+.admindetails-action-button {
+  display: inline-block;
+  margin-right: 15px;
+  margin-bottom: 10px;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  background: var(--accent-color);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.admindetails-action-button:hover {
+  background: #3578e5;
+  transform: translateY(-2px);
+}
+
+.admindetails-logout-button {
+  background: #e63946;
+}
+
+.admindetails-logout-button:hover {
+  background: #c82333;
+}
+
+/* ================================
+   THEME SUPPORT
+   ================================ */
+
+/* Light */
+.light .admin-profile-container {
+  --card-bg: #fff;
+  --content-bg: #f9f9f9;
+  --card-shadow: rgba(0, 0, 0, 0.08);
+  --text-color: #222;
+  --accent-color: #4e9fff;
+}
+
+/* Dark */
+.dark .admin-profile-container {
+  --card-bg: #1c1c27;
+  --content-bg: #252537;
+  --card-shadow: rgba(0, 0, 0, 0.3);
+  --text-color: #f0f0f0;
+  --accent-color: #4e9fff;
+}

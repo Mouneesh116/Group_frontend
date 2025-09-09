@@ -1,0 +1,277 @@
+/* ================================
+   General Container
+   ================================ */
+.shoppingcart-container {
+  max-width: 100%;
+  max-height: 100%;
+  margin: 2rem auto;
+  padding: 1.5rem;
+  border-radius: 12px;
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.light .shoppingcart-container {
+  background: #fff;
+  color: #222;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.dark .shoppingcart-container {
+  background: #2a2a2a;
+  color: #eee;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4);
+}
+
+.shoppingcart-container h1 {
+  text-align: center;
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+/* ================================
+   Cart Items
+   ================================ */
+.shoppingcart-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  transition: background 0.3s ease, box-shadow 0.3s ease;
+}
+
+.light .shoppingcart-item {
+  background: #f9f9f9;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.dark .shoppingcart-item {
+  background: #333;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+.shoppingcart-item-image {
+  width: 120px;
+  height: 120px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.shoppingcart-item-details {
+  flex: 2;
+}
+
+.shoppingcart-item-details h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.2rem;
+}
+
+.shoppingcart-unit-price {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+/* ================================
+   Item Actions
+   ================================ */
+.shoppingcart-item-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.6rem;
+}
+
+.shoppingcart-quantity-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.shoppingcart-quantity-button {
+  width: 32px;
+  height: 32px;
+  border-radius: 6px;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.1s ease;
+}
+
+.light .shoppingcart-quantity-button {
+  background: #eee;
+  color: #222;
+}
+
+.dark .shoppingcart-quantity-button {
+  background: #444;
+  color: #fff;
+}
+
+.shoppingcart-quantity-button:hover {
+  transform: scale(1.1);
+  background: #00bcd4;
+  color: #fff;
+}
+
+.shoppingcart-quantity-input {
+  width: 45px;
+  text-align: center;
+  border: 1px solid #bbb;
+  border-radius: 4px;
+  padding: 0.2rem;
+}
+
+.shoppingcart-remove-button {
+  background: #ff5252;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s ease;
+}
+
+.shoppingcart-remove-button:hover {
+  background: #e63939;
+}
+
+/* ================================
+   Shipping Address Section
+   ================================ */
+.shoppingcart-shipping-address-section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-radius: 10px;
+  transition: background 0.3s ease;
+}
+
+.light .shoppingcart-shipping-address-section {
+  background: #f1f9ff;
+}
+
+.dark .shoppingcart-shipping-address-section {
+  background: #1e2a35;
+}
+
+.shoppingcart-address-option {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  cursor: pointer;
+}
+
+.shoppingcart-address-option input {
+  margin-top: 0.4rem;
+}
+
+.shoppingcart-address-details p {
+  margin: 0.2rem 0;
+}
+
+.shoppingcart-add-new-address-btn,
+.shoppingcart-save-address-btn {
+  background: #00bcd4;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.shoppingcart-add-new-address-btn:hover,
+.shoppingcart-save-address-btn:hover {
+  background: #0097a7;
+}
+
+.shoppingcart-back-arrow {
+  cursor: pointer;
+  font-size: 1.2rem;
+  margin-right: 0.5rem;
+  color: #00bcd4;
+}
+
+.shoppingcart-address-input {
+  display: block;
+  width: 100%;
+  padding: 0.7rem;
+  margin-bottom: 0.8rem;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 0.95rem;
+}
+
+/* ================================
+   Order Summary
+   ================================ */
+.shoppingcart-summary {
+  margin-top: 2rem;
+  padding: 1.5rem;
+  border-radius: 10px;
+  font-size: 1.1rem;
+  transition: background 0.3s ease;
+}
+
+.light .shoppingcart-summary {
+  background: #fafafa;
+}
+
+.dark .shoppingcart-summary {
+  background: #2f2f2f;
+}
+
+.shoppingcart-summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
+.shoppingcart-buy-now {
+  margin-top: 1.5rem;
+  text-align: center;
+}
+
+.shoppingcart-buy-now-button {
+  background: #6a00ff;
+  color: #fff;
+  padding: 0.9rem 2rem;
+  border: none;
+  border-radius: 6px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.shoppingcart-buy-now-button:hover {
+  background: #5200cc;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 768px) {
+  .shoppingcart-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .shoppingcart-item-actions {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .shoppingcart-address-input {
+    font-size: 0.9rem;
+  }
+
+  .shoppingcart-summary {
+    font-size: 1rem;
+  }
+}

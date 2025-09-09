@@ -1,0 +1,22 @@
+/* Make root elements full height */
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* App container should expand full screen */
+.dark{
+  height: 100%;
+}
+.light{
+  height: 100%;
+}
+
+/* Let main content grow to fill space between NavBar and Footer
+main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+} */

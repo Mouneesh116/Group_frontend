@@ -1,0 +1,173 @@
+/* ================================
+   Offers Slider Styles
+   ================================ */
+.offers-slider-main-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 3rem auto;
+  padding: 0 1rem;
+  position: relative;
+}
+
+/* ================================
+   Slider Wrapper
+   ================================ */
+.offers-slider-container {
+  position: relative;
+  overflow: hidden;
+  border-radius: 1rem;
+}
+
+/* Light Theme */
+.light .offers-slider-container {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  background: #fff;
+}
+
+/* Dark Theme */
+.dark .offers-slider-container {
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  background: #1e1e1e;
+}
+
+/* ================================
+   Slides Wrapper
+   ================================ */
+.offers-slider-slides {
+  display: flex;
+  transition: transform 0.7s ease-in-out;
+  width: 100%;
+}
+
+.offers-slider-slide {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ================================
+   Navigation Buttons
+   ================================ */
+.offers-slider-nav-buttons {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-50%);
+  pointer-events: none;
+}
+
+.offers-slider-nav-button {
+  border: none;
+  font-size: 2rem;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 50%;
+  padding: 0.6rem 1rem;
+  pointer-events: all;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Light Theme */
+.light .offers-slider-nav-button {
+  background: rgba(34, 34, 34, 0.6);
+  color: #fff;
+}
+
+.light .offers-slider-nav-button:hover {
+  background: #ff6b6b;
+}
+
+/* Dark Theme */
+.dark .offers-slider-nav-button {
+  background: rgba(255, 255, 255, 0.6);
+  color: #222;
+}
+
+.dark .offers-slider-nav-button:hover {
+  background: #ff6b6b;
+  color: #fff;
+}
+
+.offers-slider-nav-button:hover {
+  transform: scale(1.1);
+}
+
+/* ================================
+   Pagination Dots
+   ================================ */
+.offers-slider-dots-container {
+  position: absolute;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 0.6rem;
+}
+
+.offers-slider-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+/* Light Theme */
+.light .offers-slider-dot {
+  background: rgba(34, 34, 34, 0.3);
+}
+
+.light .offers-slider-dot:hover {
+  background: rgba(34, 34, 34, 0.6);
+}
+
+.light .offers-slider-dot.active {
+  background: #ff6b6b;
+}
+
+/* Dark Theme */
+.dark .offers-slider-dot {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+.dark .offers-slider-dot:hover {
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.dark .offers-slider-dot.active {
+  background: #ff6b6b;
+}
+
+/* ================================
+   Responsive
+   ================================ */
+@media (max-width: 900px) {
+  .offers-slider-nav-button {
+    font-size: 1.5rem;
+    padding: 0.5rem 0.8rem;
+  }
+
+  .offers-slider-dots-container {
+    bottom: 0.8rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .offers-slider-main-container {
+    margin: 1.5rem auto;
+  }
+
+  .offers-slider-nav-buttons {
+    padding: 0 0.5rem;
+  }
+
+  .offers-slider-dot {
+    width: 10px;
+    height: 10px;
+  }
+}

@@ -1,0 +1,149 @@
+/* ============ Base (works even without theme) ============ */
+.wishlist {
+  background: var(--card-bg, #fff);
+  color: var(--text-color, inherit);
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid var(--border-color, #e2e2e2);
+  box-shadow: var(--card-shadow, 0 2px 6px rgba(0,0,0,0.08));
+}
+
+.wishlist-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin-bottom: 20px;
+  border-bottom: 2px solid var(--accent-color, #2196f3);
+  display: inline-block;
+  padding-bottom: 5px;
+  color: var(--heading-color, #333);
+}
+
+.wishlist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.wishlist-item-container {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color, #eee);
+  border-radius: 8px;
+  padding: 12px;
+  transition: box-shadow 0.2s ease, transform 0.2s ease;
+  background: var(--surface-bg, #fafafa);
+}
+
+.wishlist-item-container:hover {
+  box-shadow: var(--card-shadow-hover, 0 4px 10px rgba(0,0,0,0.1));
+  transform: translateY(-2px);
+}
+
+.wishlist-item-link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+}
+
+.wishlist-item-main-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.wishlist-image {
+  width: 90px;
+  height: 90px;
+  object-fit: cover;
+  border-radius: 8px;
+  border: 1px solid var(--image-border, #ddd);
+  flex-shrink: 0;
+}
+
+.wishlist-info {
+  flex: 1;
+}
+
+.wishlist-item-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--title-color, #222);
+}
+
+.wishlist-item-detail {
+  font-size: 0.95rem;
+  color: var(--muted-text, #555);
+  margin: 4px 0;
+}
+
+.wishlist-item-price {
+  font-weight: bold;
+  color: var(--price-color, #2e7d32);
+}
+
+.wishlist-item-price-strike {
+  font-size: 0.9rem;
+  color: var(--strike-color, #999);
+}
+
+.wishlist-item-buttons {
+  margin-top: 10px;
+  text-align: right;
+}
+
+.wishlist-remove-button {
+  padding: 6px 14px;
+  background: #e53935;
+  color: #fff;
+  font-size: 0.9rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.wishlist-remove-button:hover {
+  background: #c62828;
+}
+
+.wishlist-empty {
+  text-align: center;
+  color: var(--muted-text, #666);
+  font-style: italic;
+  padding: 20px 0;
+}
+
+/* ============ Light Theme ============ */
+.light .wishlist {
+  --card-bg: #fff;
+  --text-color: #222;
+  --heading-color: #333;
+  --title-color: #222;
+  --muted-text: #555;
+  --border-color: #e2e2e2;
+  --surface-bg: #fafafa;
+  --image-border: #ddd;
+  --price-color: #2e7d32;
+  --strike-color: #999;
+  --accent-color: #2196f3;
+  --card-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.12);
+}
+
+/* ============ Dark Theme ============ */
+.dark .wishlist {
+  --card-bg: #2b2b2b;
+  --text-color: #eee;
+  --heading-color: #fff;
+  --title-color: #fff;
+  --muted-text: #c9c9c9;
+  --border-color: #3e3e3e;
+  --surface-bg: #222;        /* slightly darker card inner surface */
+  --image-border: #444;
+  --price-color: #86e29a;    /* brighter green for contrast */
+  --strike-color: #aaa;
+  --accent-color: #64b5f6;
+  --card-shadow: 0 2px 6px rgba(0,0,0,0.5);
+  --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.7);
+}
