@@ -32,7 +32,7 @@
           docker rm -f ${CONTAINER} || true
           docker pull ${IMAGE_NAME}:latest
           docker run -d --name ${CONTAINER} -p ${PORT_MAP} --restart unless
-stopped ${IMAGE_NAME}:latest
+          stopped ${IMAGE_NAME}:latest
         """
       }
     }
