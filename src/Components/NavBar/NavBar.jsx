@@ -4,7 +4,7 @@ import './NavBar.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch, faUser, faShoppingCart, faBars, faMoon, faSun } from '@fortawesome/free-solid-svg-icons';
 import logoLight from "../../assets/Images/Logo_white.webp";
-import logoDark from "../../assets/Images/Logo_dark.webp";
+import logoDark from "../../assets/Images/Logo_Dark.webp";
 import { CartContext } from '../../Context/CartContext';
 import { AuthContext } from '../../Context/AuthContext';
 import { useTheme } from '../../Context/ThemeContext';   
