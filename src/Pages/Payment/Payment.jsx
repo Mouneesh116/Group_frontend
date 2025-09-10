@@ -79,7 +79,7 @@ export default function Payment() {
         key: RAZORPAY_KEY,
         amount: razorpayOrder.amount,
         currency: razorpayOrder.currency || "INR",
-        name: "My Demo Store",
+        name: "MS TRENDZ Store",
         description: orderPayload
           ? `Order payment — ₹${(razorpayOrder.amount / 100).toFixed(2)}`
           : `Demo checkout — ₹${forcedAmountInRupees}`,
