@@ -1,11 +1,12 @@
 import React from 'react';
 import './CategoriesRow.css';
-import cart1 from "../../Assets/Images/Fashion.jpg";
-import cart2 from "../../Assets/Images/electronics.jpg";
-import cart3 from "../../Assets/Images/shoes.jpg";
-import cart4 from "../../Assets/Images/Beauty.jpg";
-import cart5 from "../../Assets/Images/sports.jpg";
-import cart6 from "../../Assets/Images/decorate.jpg";
+
+const cart1 = "https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/Fashion.jpg";
+const cart2 = "https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/electronics.jpg";
+const cart3 = "https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/shoes.jpg";
+const cart4 = "https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/Beauty.jpg";
+const cart5 = "https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/sports.jpg";
+const cart6 = "https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/decorate.jpg";
 import { Link } from 'react-router-dom';
  
 const CategoriesRow = () => {
@@ -41,4 +42,3 @@ const CategoriesRow = () => {
 };
  
 export default CategoriesRow;
- 

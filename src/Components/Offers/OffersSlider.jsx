@@ -7,8 +7,8 @@ import './OffersSlider.css';
 // The image from the Fashi example (woman with greens) is not in your Assets,
 // so you'll need to find a suitable replacement or use that exact URL if available.
 import defaultOfferImage from '../../Assets/Images/offerimage.jpg'; // Placeholder
-import phoneImage from '../../Assets/Images/phone.png'; // Placeholder if you reuse it
-import specialOfferImage from '../../Assets/Images/specialoffer.jpg'; // Placeholder
+const phoneImage = 'https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/phone.png';
+const specialOfferImage = 'https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/specialoffer.jpg';
  
 export const OffersSlider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
