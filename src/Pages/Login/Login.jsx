@@ -1,7 +1,7 @@
 import React, { useState, useContext } from 'react'; // Import useContext
 import './Login.css';
 import { FaEnvelope, FaLock } from 'react-icons/fa';
-import shoes from '../../Assets/Images/login.jpg'; // Import your image here
+const shoes = 'https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/login.jpg'; // Import your image here
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthContext';
 import { ToastContainer, toast } from 'react-toastify';
