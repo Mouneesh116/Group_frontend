@@ -36,36 +36,40 @@ pipeline {
 
     stage('Deploy on EC2') {
       steps {
-        // use the environment variables so this stage is generic
-        sh """
-          set -euo pipefail
-          echo 'Stopping and removing existing container (if any)...'
-          docker rm -f "${CONTAINER}" || true
+        script {
+          // compute host port (left side of "host:container") in Groovy to avoid shell-only expansion syntax
+          def hostPort = env.PORT_MAP.tokenize(':')[0]
 
-          echo 'Pulling image ${IMAGE_NAME}:latest'
-          docker pull "${IMAGE_NAME}:latest"
+          sh """
+            set -euo pipefail
+            echo 'Stopping and removing existing container (if any)...'
+            docker rm -f "${env.CONTAINER}" || true
 
-          echo 'Running container ${CONTAINER} from ${IMAGE_NAME}:latest'
-          docker run -d \\
-            --name "${CONTAINER}" \\
-            -p ${PORT_MAP} \\
-            --restart unless-stopped \\
-            ${IMAGE_NAME}:latest
+            echo 'Pulling image ${env.IMAGE_NAME}:latest'
+            docker pull "${env.IMAGE_NAME}:latest"
 
-          # basic health check (tries for up to ~30s)
-          echo 'Waiting for container to respond on http://localhost:${PORT_MAP%%:*} ...'
-          for i in \$(seq 1 15); do
-            if curl -sf "http://localhost:${PORT_MAP%%:*}" >/dev/null 2>&1; then
-              echo 'App is up!'
-              exit 0
-            fi
-            sleep 2
-          done
+            echo 'Running container ${env.CONTAINER} from ${env.IMAGE_NAME}:latest'
+            docker run -d \\
+              --name "${env.CONTAINER}" \\
+              -p ${env.PORT_MAP} \\
+              --restart unless-stopped \\
+              ${env.IMAGE_NAME}:latest
 
-          echo 'Warning: health check failed (container may have started but is not responding)'
-          # don't fail the job here; remove the next line if you want to fail the build instead:
-          true
-        """
+            # basic health check (tries for up to ~30s)
+            echo 'Waiting for container to respond on http://localhost:${hostPort} ...'
+            for i in \$(seq 1 15); do
+              if curl -sf "http://localhost:${hostPort}" >/dev/null 2>&1; then
+                echo 'App is up!'
+                exit 0
+              fi
+              sleep 2
+            done
+
+            echo 'Warning: health check failed (container may have started but is not responding)'
+            # keep stage non-fatal; change to "exit 1" if you want the pipeline to fail instead
+            true
+          """
+        }
       }
     }
   }
