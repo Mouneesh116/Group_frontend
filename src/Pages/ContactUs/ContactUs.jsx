@@ -48,8 +48,8 @@ const ContactUs = () => {
                     <div className="info-card">
                         <FontAwesomeIcon icon={faEnvelope} className="info-icon" />
                         <h3>Email Address</h3>
-                        <p>support@yourecommercename.com</p>
-                        <p>info@yourecommercename.com</p>
+                        <p>support@mstrendz.com</p>
+                        <p>info@mstrendz.com</p>
                     </div>
                 </div>
             </section>
