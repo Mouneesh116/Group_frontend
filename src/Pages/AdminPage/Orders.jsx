@@ -77,7 +77,7 @@ const Orders = () => {
       if (dateTo) params.dateTo = dateTo;
 
       const response = await axios.get(
-        `http://localhost:8000/api/orders/getAllOrders`,
+        `http://16.171.124.12:8000/api/orders/getAllOrders`,
         { headers: { Authorization: `Bearer ${token}` }, params }
       );
 
@@ -113,7 +113,7 @@ const Orders = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.put(
-        `http://localhost:8000/api/orders/updateStatus/${orderId}`,
+        `http://16.171.124.12:8000/api/orders/updateStatus/${orderId}`,
         { status: newStatus },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -141,7 +141,7 @@ const Orders = () => {
     try {
       const token = localStorage.getItem("token");
       const response = await axios.post(
-        `http://localhost:8000/api/orders/verify-otp/${currentOrderIdForOtp}`,
+        `http://16.171.124.12:8000/api/orders/verify-otp/${currentOrderIdForOtp}`,
         { userOtp: otpInput },
         { headers: { Authorization: `Bearer ${token}` } }
       );

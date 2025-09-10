@@ -17,7 +17,7 @@ const SearchResults = () => {
     const [error, setError] = useState(null);
  
     // API_BASE_URL is not used, process.env.REACT_APP_BACKEND_URL is used directly
-    // const API_BASE_URL = 'http://localhost:8000'; 
+    // const API_BASE_URL = 'http://16.171.124.12:8000'; 
  
     useEffect(() => {
         const fetchSearchResults = async () => {
@@ -32,9 +32,9 @@ const SearchResults = () => {
             setError(null);
  
             try {
-                console.log(`[Frontend] Searching for: "${query}" at http://localhost:8000/api/products/search?query=${query}`);
+                console.log(`[Frontend] Searching for: "${query}" at http://16.171.124.12:8000/api/products/search?query=${query}`);
 
-                const response = await axios.get(`http://localhost:8000/api/products/search`, {
+                const response = await axios.get(`http://16.171.124.12:8000/api/products/search`, {
                     params: {
                         query: query
                     }
@@ -66,7 +66,7 @@ const SearchResults = () => {
         };
  
         fetchSearchResults();
-    }, [query,"http://localhost:8000"]);
+    }, [query,"http://16.171.124.12:8000"]);
 
     return (
         <div className="searchresults-main-container">

@@ -12,7 +12,7 @@ export const WishListProvider = ({ children }) => {
     const [wishlistError, setWishlistError] = useState(null);
     const token = localStorage.getItem('token'); // Get the token from localStorage
  
-    const API_BASE_URL = "http://localhost:8000"
+    const API_BASE_URL = "http://16.171.124.12:8000"
  
     // --- useEffect to Fetch User's Wishlist ---
     useEffect(() => {
@@ -28,7 +28,7 @@ export const WishListProvider = ({ children }) => {
             console.log(token);
  
             try {
-                const response = await axios.get(`http://localhost:8000/api/users/wishlist/getItems`, {
+                const response = await axios.get(`http://16.171.124.12:8000/api/users/wishlist/getItems`, {
                     headers: {
                         Authorization: `Bearer ${token}`
                     }

@@ -17,7 +17,7 @@ const ForgotPassword = () => {
   const handleEmailSubmit = async (e) => {
     e.preventDefault();
     try {
-      const response = await axios.post(`http://localhost:8000/api/users/forgot-password`, { email });
+      const response = await axios.post(`http://16.171.124.12:8000/api/users/forgot-password`, { email });
       console.log(response.data);
       setMessage(response.data.message); // Display backend message
       localStorage.setItem('resetToken', response.data.token); // Store the token in local storage
@@ -37,7 +37,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     const token = localStorage.getItem('resetToken'); // Retrieve the token from local storage
     try {
-      const response = await axios.post(`http://localhost:8000/api/users/validate-otp`, { token, otp});
+      const response = await axios.post(`http://16.171.124.12:8000/api/users/validate-otp`, { token, otp});
       console.log(response.data);
       setMessage('OTP validated successfully');
       setStep(3); // Move to Step 3
@@ -58,7 +58,7 @@ const ForgotPassword = () => {
     // console.log('Token:', token); // Debugging log
  
     try {
-      const response = await axios.post(`http://localhost:8000/api/users/reset-password`, {
+      const response = await axios.post(`http://16.171.124.12:8000/api/users/reset-password`, {
         token,
         newPassword
       });

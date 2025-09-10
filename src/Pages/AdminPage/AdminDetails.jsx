@@ -20,7 +20,7 @@ const AdminDetails = () => {
     const fetchAdminStats = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:8000/api/admin/stats`,
+          `http://16.171.124.12:8000/api/admin/stats`,
           {
             headers: {
               Authorization: `Bearer ${localStorage.getItem("token")}`,

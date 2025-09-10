@@ -61,7 +61,7 @@ export const AuthProvider = ({ children }) => {
  const signup = async (userData) => {
   try {
     const res = await axios.post(
-      "http://localhost:8000/api/users/signup",
+      "http://16.171.124.12:8000/api/users/signup",
       userData,
       { headers: { "Content-Type": "application/json" } }
     );
@@ -92,7 +92,7 @@ export const AuthProvider = ({ children }) => {
   const login = async (userData) => {
     try {
       const response = await axios.post(
-        `http://localhost:8000/api/users/login`,
+        `http://16.171.124.12:8000/api/users/login`,
         userData,
         { headers: { 'Content-Type': 'application/json' } }
       );

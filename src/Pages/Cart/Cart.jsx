@@ -35,7 +35,7 @@ const Cart = () => {
   const [addressError, setAddressError] = useState(null);
 
   const currentUserId = user ? user.id : null;
-  const BACKEND_URL = "http://localhost:8000";
+  const BACKEND_URL = "http://16.171.124.12:8000";
 
   useEffect(() => {
     const fetchCartItems = async () => {

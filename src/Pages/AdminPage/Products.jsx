@@ -60,7 +60,7 @@ const Products = () => {
       setLoading(true);
       setError(null);
       try {
-        const response = await axios.get(`http://localhost:8000/api/products/getAllProducts`, {
+        const response = await axios.get(`http://16.171.124.12:8000/api/products/getAllProducts`, {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -138,7 +138,7 @@ const Products = () => {
           color: newProductColor,
         };
 
-        const response = await axios.post(`http://localhost:8000/api/products/add`, newProduct, {
+        const response = await axios.post(`http://16.171.124.12:8000/api/products/add`, newProduct, {
           headers: {
             'Content-Type': 'application/json',
             Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -171,7 +171,7 @@ const Products = () => {
   // Delete a product
   const handleDeleteProduct = async (id) => {
     try {
-      const response = await axios.delete(`http://localhost:8000/api/products/delete/${id}`, {
+      const response = await axios.delete(`http://16.171.124.12:8000/api/products/delete/${id}`, {
         headers: {
           'Content-Type': 'application/json',
           Authorization: `Bearer ${localStorage.getItem('token')}`,
@@ -219,7 +219,7 @@ const Products = () => {
 
     try {
       const response = await axios.put(
-        `http://localhost:8000/api/product/update/${idToSave}`,
+        `http://16.171.124.12:8000/api/product/update/${idToSave}`,
         updatedProduct,
         {
           headers: {
