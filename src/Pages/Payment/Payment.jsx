@@ -6,7 +6,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 import "./Payment.css";
 
-const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8080";
+const API_BASE = import.meta.env.VITE_API_BASE || "http://localhost:8000";
 const RAZORPAY_KEY = import.meta.env.VITE_RAZORPAY_KEY_ID || ""; // publishable key
 
 // Loads Razorpay SDK if not already loaded

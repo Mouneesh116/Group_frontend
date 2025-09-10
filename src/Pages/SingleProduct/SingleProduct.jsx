@@ -27,7 +27,7 @@ const SingleProduct = () => {
   useEffect(() => {
     const fetchUserReviews = async () => {
       try {
-        const response = await axios.get(`http://localhost:8080/api/product/reviews/${id}`, {
+        const response = await axios.get(`http://localhost:8000/api/product/reviews/${id}`, {
           headers: {
             'Content-Type': 'application/json',
           }
@@ -43,7 +43,7 @@ const SingleProduct = () => {
     const fetchProductById = async () => {
       try {
         setLoading(true);
-        const response = await axios.get(`http://localhost:8080/api/product/${id}`);
+        const response = await axios.get(`http://localhost:8000/api/product/${id}`);
         const data = response.data.product;
         console.log(data);
         setFilteredProduct(data);

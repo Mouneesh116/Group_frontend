@@ -26,7 +26,7 @@ const ChangePassword = () => {
 
     try {
       await axios.put(
-        `http://localhost:8080/api/users/${userId}/change-password`,
+        `http://localhost:8000/api/users/${userId}/change-password`,
         {
           oldPassword: formData.oldPassword,
           newPassword: formData.newPassword,

@@ -12,7 +12,7 @@ const ChatBot = () => {
   const messagesEndRef = useRef(null);
 
   // Adjust this base URL as needed for your environment
-  const API_BASE = "http://localhost:8080";
+  const API_BASE = "http://localhost:8000";
 
   // scroll to bottom when messages change
   useEffect(() => {

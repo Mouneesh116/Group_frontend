@@ -29,7 +29,7 @@ const EditProfile = () => {
     try {
       setLoading(true);
       const response = await axios.put(
-        `http://localhost:8080/api/users/${userId}/edit-profile`,
+        `http://localhost:8000/api/users/${userId}/edit-profile`,
         formData,
         {
           headers: { Authorization: `Bearer ${localStorage.getItem("token")}` },

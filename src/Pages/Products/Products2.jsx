@@ -24,7 +24,7 @@ export const Products2 = () => {
         maxPrice: null,
     });
  
-    const BACKEND_URL = "http://localhost:8080";
+    const BACKEND_URL = "http://localhost:8000";
  
     useEffect(() => {
         const fetchProductsByCategory = async () => {
@@ -32,7 +32,7 @@ export const Products2 = () => {
                 setLoading(true);
                 setError(null);
                 // Make sure your backend correctly returns data with 'category' and 'subCategory' fields
-                const response = await axios.get(`http://localhost:8080/api/products?category=${category}`);
+                const response = await axios.get(`http://localhost:8000/api/products?category=${category}`);
                 console.log(response.data); // Debugging line to check the response structure
                 setAllProductsInCategory(response.data);
             } catch (err) {

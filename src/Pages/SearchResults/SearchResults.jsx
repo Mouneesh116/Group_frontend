@@ -32,9 +32,9 @@ const SearchResults = () => {
             setError(null);
  
             try {
-                console.log(`[Frontend] Searching for: "${query}" at http://localhost:8080/api/products/search?query=${query}`);
+                console.log(`[Frontend] Searching for: "${query}" at http://localhost:8000/api/products/search?query=${query}`);
 
-                const response = await axios.get(`http://localhost:8080/api/products/search`, {
+                const response = await axios.get(`http://localhost:8000/api/products/search`, {
                     params: {
                         query: query
                     }
@@ -66,7 +66,7 @@ const SearchResults = () => {
         };
  
         fetchSearchResults();
-    }, [query,"http://localhost:8080"]);
+    }, [query,"http://localhost:8000"]);
 
     return (
         <div className="searchresults-main-container">
