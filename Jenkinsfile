@@ -41,7 +41,9 @@ pipeline {
           def hostPort = env.PORT_MAP.tokenize(':')[0]
 
           sh """
+            #!/usr/bin/env bash
             set -euo pipefail
+
             echo 'Stopping and removing existing container (if any)...'
             docker rm -f "${env.CONTAINER}" || true
 
