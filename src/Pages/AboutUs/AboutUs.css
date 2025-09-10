@@ -23,7 +23,7 @@ body {
 
 /* Dark Theme */
 .dark {
-  background: #1c1c1c;
+  background: black;
   color: #eee;
 }
 
@@ -33,7 +33,7 @@ body {
 .section-title {
   font-size: 2.2rem;
   text-align: center;
-  margin-bottom: 50px;
+  margin-bottom: 0px;
   position: relative;
   padding-bottom: 15px;
   transition: color 0.3s ease;
@@ -68,7 +68,7 @@ body {
       no-repeat center center/cover;
   text-align: center;
   padding: 100px 20px;
-  margin-bottom: 60px;
+  margin-bottom: 0px;
   border-radius: 10px;
   display: flex;
   align-items: center;
@@ -79,14 +79,14 @@ body {
 
 .hero-title {
   font-size: 3.5rem;
-  margin-bottom: 20px;
+  margin-bottom: 0px;
   font-weight: bold;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .hero-subtitle {
   font-size: 1.3rem;
-  margin-bottom: 40px;
+  margin-bottom: 0px;
   line-height: 1.8;
 }
 
@@ -223,7 +223,7 @@ body {
 .testimonial-quote {
   font-size: 1.25rem;
   font-style: italic;
-  margin-bottom: 25px;
+  margin-bottom: 0px;
   color: inherit;
 }
 
@@ -233,7 +233,7 @@ body {
 .call-to-action-section {
   text-align: center;
   padding: 80px 20px;
-  margin-top: 60px;
+  margin-top: 0px;
   border-radius: 10px;
   transition: background 0.3s ease;
 }

@@ -67,10 +67,10 @@ const AboutUs = () => {
                 <div className="testimonial-card">
                     <img src="https://www.litmusworld.com/wp-content/uploads/2018/08/7-key-themes-sm.jpg" alt="Customer Avatar" className="testimonial-avatar" />
                     <p className="testimonial-quote">
-                    <b>Seamless Ecommerce</b> has completely changed my online shopping experience! The quality is unparalleled, and their customer service is truly exceptional. I highly recommend them!"
+                    <b>MS Trendzz Ecommerce</b> has completely changed my online shopping experience! The quality is unparalleled, and their customer service is truly exceptional. I highly recommend them!"
                     </p>
                     <p className="testimonial-author">
-                        <b>Jane Doe</b>, Avid Shopper
+                        <b>savanth</b>, Avid Shopper
                     </p>
                 </div>
             </section>
