@@ -1,7 +1,7 @@
 pipeline {
   agent any
   environment {
-    IMAGE_NAME = "mouneeshgangadhari/myreact"
+    IMAGE_NAME = "shrreeeyyyyaaaaa/group_project"
     IMAGE_TAG  = "build-${BUILD_NUMBER}"
     CONTAINER  = "reactapp"
     PORT_MAP   = "80:80"
