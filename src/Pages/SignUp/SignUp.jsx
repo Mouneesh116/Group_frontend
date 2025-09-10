@@ -57,7 +57,7 @@ const handleSubmit2 = async (e) => {
   if(Object.keys(formErrors).length === 0){
     const formData = {username,email,password};
     try {
-      const response = await axios.post(`http://localhost:8080/api/users/signup`, formData,
+      const response = await axios.post(`http://localhost:8000/api/users/signup`, formData,
         {headers: {'Content-Type': 'application/json'}}
       );
       console.log(response.data);

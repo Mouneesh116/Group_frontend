@@ -49,7 +49,7 @@ const OrderCard = ({
 
       try {
         const response = await axios.get(
-          `http://localhost:8080/api/products/getProductImage/${productId}`,
+          `http://localhost:8000/api/products/getProductImage/${productId}`,
           { headers: { Authorization: `Bearer ${token}` } }
         );
 
@@ -96,7 +96,7 @@ const OrderCard = ({
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/orders/cancel-item/${order.id}`,
+        `http://localhost:8000/api/orders/cancel-item/${order.id}`,
         { productId },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -127,7 +127,7 @@ const OrderCard = ({
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/orders/request-return/${order.id}`,
+        `http://localhost:8000/api/orders/request-return/${order.id}`,
         { productId },
         { headers: { Authorization: `Bearer ${token}` } }
       );
@@ -159,7 +159,7 @@ const OrderCard = ({
 
     try {
       const response = await axios.post(
-        `http://localhost:8080/api/users/reviews/add/${productId}`,
+        `http://localhost:8000/api/users/reviews/add/${productId}`,
         { userName, rating, review },
         { headers: { Authorization: `Bearer ${token}` } }
       );

@@ -97,9 +97,9 @@ const Dashboard = () => {
         const headers = token ? { Authorization: `Bearer ${token}` } : {};
 
         const [salesResponse, ordersResponse, categoryResponse] = await Promise.all([
-          axios.get(`http://localhost:8080/api/admin/sales`, { headers }),
-          axios.get(`http://localhost:8080/api/admin/orders`, { headers }),
-          axios.get(`http://localhost:8080/api/admin/category-sales`, { headers })
+          axios.get(`http://localhost:8000/api/admin/sales`, { headers }),
+          axios.get(`http://localhost:8000/api/admin/orders`, { headers }),
+          axios.get(`http://localhost:8000/api/admin/category-sales`, { headers })
         ]);
 
         const toSeries = (resp) => {

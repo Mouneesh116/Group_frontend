@@ -58,7 +58,7 @@ useEffect(()=>{
       return;
     }
     try {
-      const response = await axios.get(`http://localhost:8080/api/user/cart/getItems`, {
+      const response = await axios.get(`http://localhost:8000/api/user/cart/getItems`, {
         headers: {
           Authorization: `Bearer ${token}`
         }
@@ -82,7 +82,7 @@ useEffect(()=>{
   const token = localStorage.getItem('token');
   const addToCart = async (product) => {
     try {
-      const response = await axios.post(`http://localhost:8080/api/users/cart/add`,product,
+      const response = await axios.post(`http://localhost:8000/api/users/cart/add`,product,
         {headers: {'Content-Type': 'application/json',
           'Authorization': `Bearer ${token}`
         }}
