@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './SignUp.css'; // Import your CSS file for styling
 import { FaEnvelope, FaLock, FaUser } from 'react-icons/fa';
-import shoes from '../../Assets/Images/signup.jpg';
+const shoes = 'https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/signup.jpg';
 import { useNavigate } from 'react-router-dom';
 import { AuthContext } from '../../Context/AuthContext';
 import { useContext } from 'react';

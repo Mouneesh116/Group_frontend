@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './ForgotPassword.css';
 import { FaEnvelope } from 'react-icons/fa';
-import loginImage from '../../Assets/Images/login.jpg'; // Import your image here
+const loginImage = 'https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/login.jpg'; // Import your image here
 import axios from 'axios';
 
 

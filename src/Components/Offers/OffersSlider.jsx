@@ -6,7 +6,7 @@ import './OffersSlider.css';
 // IMPORTANT: Replace these paths with actual web-accessible URLs or correct import paths.
 // The image from the Fashi example (woman with greens) is not in your Assets,
 // so you'll need to find a suitable replacement or use that exact URL if available.
-import defaultOfferImage from '../../Assets/Images/offerimage.jpg'; // Placeholder
+const defaultOfferImage = 'https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/offerimage.jpg'; // Placeholder
 const phoneImage = 'https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/phone.png';
 const specialOfferImage = 'https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/specialoffer.jpg';
  

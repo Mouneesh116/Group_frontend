@@ -1,6 +1,6 @@
 import React from 'react'
 import NavBar from '../../Components/NavBar/NavBar'
-import women from '../../Assets/Images/women.jpg'
+const women = 'https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/women.jpg'
 import PromoSection from '../../Components/PromoSection/PromoSection'
 import CategoriesRow from '../../Components/CategoriesRow/CategoriesRow'
 import ProductCard from '../../Components/ProductCard/ProductCard'

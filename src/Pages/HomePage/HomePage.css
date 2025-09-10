@@ -24,7 +24,7 @@
       rgba(0, 0, 0, 0.35),
       rgba(0, 0, 0, 0.35)
     ),
-    url("../../Assets/Images/women.jpg") no-repeat center center/cover;
+    url("https://mouneesh-group.s3.us-east-1.amazonaws.com/Images/women.jpg") no-repeat center center/cover;
   color: var(--hero-text);
   text-align: center;
   padding: 60px 20px;
