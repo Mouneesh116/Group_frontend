@@ -173,7 +173,7 @@ const ChatBot = () => {
                       <div key={c.id || i} className="cart-item">
                         <div className="cart-item-left">
                           <div className="cart-item-title">{c.title}</div>
-                          <div className="cart-item-meta">{c.qty} × {c.price != null ? `$${c.price}` : "N/A"}{c.lineTotal != null ? ` = $${c.lineTotal.toFixed(2)}` : ""}</div>
+                          <div className="cart-item-meta">{c.qty} × {c.price != null ? `₹${c.price}` : "N/A"}{c.lineTotal != null ? ` = ₹${c.lineTotal.toFixed(2)}` : ""}</div>
                         </div>
                         <div className="cart-item-actions">
                           <button
@@ -187,7 +187,7 @@ const ChatBot = () => {
                       </div>
                     ))}
 
-                    <div className="cart-subtotal">Subtotal: ${typeof msg.subtotal === "number" ? msg.subtotal.toFixed(2) : msg.subtotal}</div>
+                    <div className="cart-subtotal">Subtotal: ₹ {typeof msg.subtotal === "number" ? msg.subtotal.toFixed(2) : msg.subtotal}</div>
 
                     <div style={{ marginTop: 8, display: "flex", gap: 8 }}>
                       <button className="quick-option-button" onClick={handleCheckout} disabled={isBotTyping}>Checkout</button>
