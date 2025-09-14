@@ -67,6 +67,7 @@ body {
 
 /* Containers */
 .singleproduct-app {
+  background-color: var(--bg);
   min-height: 100%;
   display: flex;
   justify-content: center;
@@ -79,7 +80,6 @@ body {
   display: flex;
   gap: 40px;
   width: 100%;
-  background-color: black;
   box-shadow: var(--shadow);
   border: 1px solid var(--border);
   align-items: stretch;
@@ -175,7 +175,9 @@ body {
   border-radius: 999px;
   box-shadow: 0 4px 12px rgba(2,6,23,0.12);
 }
-
+.singleproduct-user-review-body{
+  background-color: var(--bg);
+}
 /* option buttons (add to cart / buy) */
 .singleproduct-options {
   display: flex;
@@ -376,7 +378,7 @@ body {
   margin-top: 18px;
 }
 .singleproduct-user-review-card {
-  background: black;
+  background-color: var(--bg);
   border: 1px solid var(--border);
   border-radius: var(--radius-md);
   padding: 14px;

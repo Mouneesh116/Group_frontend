@@ -181,7 +181,7 @@ const SingleProduct = () => {
             <h3>Product Description</h3>
             <p>Category - {filteredProduct.subCategory}</p>
             <p>{filteredProduct.company} Assured Product</p>
-            <div className="singleproduct-color-row">
+            {/* <div className="singleproduct-color-row">
               <p>{selectedColor}:</p> 
               <div className="singleproduct-color-options">
                 <div className="singleproduct-color-wrapper" onClick={() => handleColorSelect('Red')}>
@@ -197,7 +197,7 @@ const SingleProduct = () => {
                   <div className="singleproduct-color-circle" style={{ backgroundColor: 'black' }}></div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
           <div className="singleproduct-product-details">
             {/* Delivery Section */}
