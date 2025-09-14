@@ -207,11 +207,6 @@ const SingleProduct = () => {
               <p>Free delivery for orders above <strong>₹500</strong></p>
             </div>
           </div>
-          <div className="singleproduct-lastDetails">
-            <h3>Product Details</h3>
-            <p>Experience the best quality with Seamless E-Commerce verified products.
-            Perfect for enthusiasts looking for premium features.</p>
-          </div>
           <div className="singleproduct-product-user-reviews">
   <h3>User Reviews</h3>
   {loading ? (
