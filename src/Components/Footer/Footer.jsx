@@ -44,7 +44,7 @@ const Footer = () => {
             </div>
             <div className="footer-bottom">
                 <p>
-                     Loyalty Methods Unit 2, 3rd Floor, Sy No: 115/1, Kapil Towers, Financial District, Nanakramguda, Hyderabad, Telangana 500032 ·
+                     Loyalty Methods , VSD tech park , 16th floor, Financial District, Nanakramguda, Hyderabad, Telangana 500032 ·
                 </p>
             </div>
         </footer>
